@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" xmlns:r="reflection" Id="MmjJmOJpSi5MQ4PE76v2SF" LanguageVersion="2024.6.7-0136-ga34ff89f71" Version="0.128">
-  <NugetDependency Id="BguWkaXEMADMOCpL1jti9a" Location="VL.CoreLib" Version="2024.6.7-0136-ga34ff89f71" />
+<Document xmlns:p="property" xmlns:r="reflection" Id="MmjJmOJpSi5MQ4PE76v2SF" LanguageVersion="2024.6.7-0177-ge02e8501bb" Version="0.128">
+  <NugetDependency Id="BguWkaXEMADMOCpL1jti9a" Location="VL.CoreLib" Version="2024.6.7-0177-ge02e8501bb" />
   <Patch Id="ALpqjXEf369Pnuk64gmWrV">
     <Canvas Id="V8HBoVZNCZmPvIQ0NbkFQ5" DefaultCategory="Fuse.Compute" CanvasType="FullCategory">
       <Canvas Id="ELWzy71RwdSLg6EYVb85ia" Name="Internal" Position="61,134">
@@ -2185,6 +2185,7 @@
                         <Pin Id="IsAO7A9EiiUQPCSss4eh6j" Name="Buffer" Kind="InputPin" />
                         <Pin Id="Hy6tYTbsiBZLUSJUQFItsP" Name="Type" Kind="InputPin" />
                         <Pin Id="Sxmd0Y3f1OePYWhg02xZU8" Name="Output" Kind="OutputPin" />
+                        <Pin Id="D4tEwwr4qwSMgnNVbrFshi" Name="BufferType" Kind="InputPin" IsHidden="true" />
                       </Node>
                     </Patch>
                   </Node>
@@ -2261,6 +2262,7 @@
                     <Pin Id="NcgnDy7vjvkQc7NO6hnmRq" Name="Buffer" Kind="InputPin" />
                     <Pin Id="UwpjXzzRWFzNF77sUoXBHG" Name="Type" Kind="InputPin" />
                     <Pin Id="H7B7YZEndWZNAc2fbbpYzx" Name="Output" Kind="OutputPin" />
+                    <Pin Id="MAbyb7GEFKgP2tlQ2HoYKl" Name="BufferType" Kind="InputPin" IsHidden="true" />
                   </Node>
                   <Node Bounds="284,329,36,19" Id="JsEsNC2rrjaNvHoNatdI5B">
                     <p:NodeReference LastCategoryFullName="Fuse.Math" LastDependency="Fuse.Core.vl">
@@ -3237,6 +3239,7 @@
                 <Pin Id="J5neriBT6WYMUWORfRln2y" Name="Buffer" Kind="InputPin" />
                 <Pin Id="LMujUmQh3CxPodz1b8YY89" Name="Type" Kind="InputPin" />
                 <Pin Id="LqkARmx8klXM0dzYZU7YsZ" Name="Output" Kind="OutputPin" />
+                <Pin Id="CETp5f5350ULdME2WsRKRq" Name="BufferType" Kind="InputPin" IsHidden="true" />
               </Node>
               <Node Bounds="655,520,87,19" Id="DWr7fU6rlLCNBDK6x2TmFp">
                 <p:NodeReference LastCategoryFullName="Fuse.Compute" LastDependency="Fuse.Compute.vl">
@@ -3269,6 +3272,7 @@
                 <Pin Id="GzkqB29UqYnNMOpkRMqsth" Name="Buffer" Kind="InputPin" />
                 <Pin Id="FjsaJKPQyU2Pfo8ZOl2Zdt" Name="Type" Kind="InputPin" />
                 <Pin Id="ISreNNpZNXULteEHbXVZyT" Name="Output" Kind="OutputPin" />
+                <Pin Id="KWPwzYO5Eu1OLwYvsHjbnm" Name="BufferType" Kind="InputPin" IsHidden="true" />
               </Node>
               <Node Bounds="873,531,87,19" Id="DwZn5B4OYZkML2JPjbsQ3Q">
                 <p:NodeReference LastCategoryFullName="Fuse.Compute" LastDependency="Fuse.Compute.vl">
@@ -5182,6 +5186,7 @@
                 <Pin Id="MJXRbExHlhjLGK6ndRwf32" Name="Buffer" Kind="InputPin" />
                 <Pin Id="Uuf7Mda61HLPWvaPwju7nH" Name="Output" Kind="OutputPin" />
                 <Pin Id="IdfOc8HUD5aNK10TZtEV7Q" Name="Type" Kind="InputPin" IsHidden="true" />
+                <Pin Id="UB80zt3D2D6MFjMsXlOVcI" Name="BufferType" Kind="InputPin" IsHidden="true" />
               </Node>
               <Node Bounds="1866,414,52,19" Id="UfqYEQqLtqhMo5vLGw3iHO">
                 <p:NodeReference LastCategoryFullName="Fuse.Buffer" LastDependency="Fuse.Core.vl">
@@ -14038,6 +14043,7 @@
                 <Pin Id="AkB6GvjRd36MpwKpFGhNx0" Name="Buffer" Kind="InputPin" />
                 <Pin Id="Fm6WRw877RYL46dn6Y1abR" Name="Type" Kind="InputPin" />
                 <Pin Id="VbTDaFLu9j3LEC9e06QrHY" Name="Output" Kind="OutputPin" />
+                <Pin Id="CXiqXHBdgXvPbiNEZWzezb" Name="BufferType" Kind="InputPin" IsHidden="true" />
               </Node>
               <Node Bounds="183,452,79,19" Id="BL4BtnCQOOpLe6zDKyDWhb">
                 <p:NodeReference LastCategoryFullName="Fuse.Buffer" LastDependency="Fuse.Core.vl">
@@ -14155,6 +14161,7 @@
                 <Pin Id="M6qEglvI4eVNi6dmVjN79G" Name="Buffer" Kind="InputPin" />
                 <Pin Id="L7iO0yAmMzwMCLGrm3TnNb" Name="Type" Kind="InputPin" IsHidden="true" />
                 <Pin Id="Laau9V2f53NLMOjrcGKtm3" Name="Output" Kind="OutputPin" />
+                <Pin Id="PoU9MFUoDBjMInIpnTi2iy" Name="BufferType" Kind="InputPin" IsHidden="true" />
               </Node>
               <Node Bounds="592,504,72,19" Id="PcLLL00LG77LiMcNO8GWuu">
                 <p:NodeReference LastCategoryFullName="Fuse.Buffer" LastDependency="Fuse.Core.vl">
@@ -14760,6 +14767,7 @@
                 <Pin Id="B6TZ5NdAImKPN0XCRdw2Lv" Name="Buffer" Kind="InputPin" />
                 <Pin Id="PDjLTxlxIBGPtkLyppm9OZ" Name="Type" Kind="InputPin" />
                 <Pin Id="EOhXJOap6xtNSpmHaoiS7z" Name="Output" Kind="OutputPin" />
+                <Pin Id="KAilRrAkvy0N8NpoCSJdzG" Name="BufferType" Kind="InputPin" IsHidden="true" />
               </Node>
               <Node Bounds="986,761,102,19" Id="N6wum4tmcXeLsG42x8lieQ">
                 <p:NodeReference LastCategoryFullName="Fuse.Compute" LastDependency="Fuse.Core.vl">
@@ -15878,6 +15886,7 @@
                 <Pin Id="Q8JMPMNojYdLlgNn22AwqR" Name="Buffer" Kind="InputPin" />
                 <Pin Id="DtasHpkdANxLj9o7GVsI3F" Name="Type" Kind="InputPin" />
                 <Pin Id="UAXjRlb9X57PIf9E4pdZfK" Name="Output" Kind="OutputPin" />
+                <Pin Id="NvJUG10zcBPOzUHn3auaRu" Name="BufferType" Kind="InputPin" IsHidden="true" />
               </Node>
               <Node Bounds="580,956,102,19" Id="D1aoAHKIrM3NwRjaMELjLw">
                 <p:NodeReference LastCategoryFullName="Fuse.Compute" LastDependency="Fuse.Core.vl">
@@ -16920,6 +16929,7 @@
                 <Pin Id="UckLaUA9qlTM8f6oHM4AX7" Name="Buffer" Kind="InputPin" />
                 <Pin Id="PXtXRx2yarBQbLvEqBta6h" Name="Type" Kind="InputPin" IsHidden="true" />
                 <Pin Id="SC4oUKzrTq9Ld74jV9pwlg" Name="Output" Kind="OutputPin" />
+                <Pin Id="CHFdaNRdrEiK9iu5aJWLJk" Name="BufferType" Kind="InputPin" IsHidden="true" />
               </Node>
               <Pad Id="TlE00GMebHeLRbNJ8XFGoO" SlotId="S6kIAv84a41N424fRCfx3K" Bounds="179,141" />
               <Pad Id="BmSNTPBgaOPM80ahqjCHb4" SlotId="S6kIAv84a41N424fRCfx3K" Bounds="1274,148" />
@@ -18243,6 +18253,7 @@
                 <Pin Id="VeQIVjQwaGFL54GyaWBpNo" Name="Buffer" Kind="InputPin" />
                 <Pin Id="IcNXdhbRHimOryIqF70Yoe" Name="Type" Kind="InputPin" IsHidden="true" />
                 <Pin Id="DIJmUuIuNcBOmaIpZBxRSt" Name="Output" Kind="OutputPin" />
+                <Pin Id="H9QBgCTj0ZSMOVycWtpxKS" Name="BufferType" Kind="InputPin" IsHidden="true" />
               </Node>
               <Pad Id="MB3UkftaJADLLC9NiUS4Hq" SlotId="IMnEggKVsKwQdOUHva4P1G" Bounds="179,141" />
               <Pad Id="VGnmuw8lgfnO7rHo46sBih" SlotId="IMnEggKVsKwQdOUHva4P1G" Bounds="1253,130" />
@@ -19561,6 +19572,7 @@
                   <Pin Id="RFDwZ6kTUFeLreRljXV2MG" Name="Buffer" Kind="InputPin" />
                   <Pin Id="EsiCH0DNyF9OFKWTppxPk1" Name="Output" Kind="OutputPin" />
                   <Pin Id="LqGa1ZwbhvaMg3nUM9czj8" Name="Type" Kind="InputPin" IsHidden="true" />
+                  <Pin Id="MotwwwbrkmwMk9Vcfc6Gim" Name="BufferType" Kind="InputPin" IsHidden="true" />
                 </Node>
                 <Node Bounds="496,1877,94,19" Id="IUTHU526zvvNsygnK6nVn7">
                   <p:NodeReference LastCategoryFullName="Fuse.Compute" LastDependency="Fuse.Compute.vl">
@@ -19788,6 +19800,7 @@
                   <Pin Id="FM1yuIYAVtLPjpkZjCmCDN" Name="Buffer" Kind="InputPin" />
                   <Pin Id="F9Xi8OfzuD9M8lfU3yfOtj" Name="Output" Kind="OutputPin" />
                   <Pin Id="SzKSerihM5NPadefZGzx3W" Name="Type" Kind="InputPin" IsHidden="true" />
+                  <Pin Id="STILKXsIUFlMDA9IDPypSE" Name="BufferType" Kind="InputPin" IsHidden="true" />
                 </Node>
                 <Node Bounds="560,881,50,19" Id="DFaomSXPZwQPZgMBHLUnnS">
                   <p:NodeReference LastCategoryFullName="Fuse.Buffer" LastDependency="Fuse.Core.vl">
@@ -19829,6 +19842,7 @@
                   <Pin Id="FkEk9jHpVk1MnewKfPU7CA" Name="Buffer" Kind="InputPin" />
                   <Pin Id="FzeOhT4kLkdLM2NhiWGDxX" Name="Type" Kind="InputPin" IsHidden="true" />
                   <Pin Id="OxSquOm5rJWN4P4kJNVvyK" Name="Output" Kind="OutputPin" />
+                  <Pin Id="MH5tRXyAIhlPyG3rrKgMJb" Name="BufferType" Kind="InputPin" IsHidden="true" />
                 </Node>
                 <ControlPoint Id="ONSf7nqguXBNesju1ip9Qe" Bounds="504,697" />
                 <Node Bounds="591,1671,65,19" Id="Oonn8dbertUNBAAcKQGQzp">
@@ -20366,6 +20380,7 @@
                 <Pin Id="ENNBbMrP7BrNk2R5yI1u3k" Name="Buffer" Kind="InputPin" />
                 <Pin Id="Gmii4X7sSGUNVcFkimqgPQ" Name="Type" Kind="InputPin" IsHidden="true" />
                 <Pin Id="E9MxpWBbafeNIUGmS66EB0" Name="Output" Kind="OutputPin" />
+                <Pin Id="NEHupia8NJkLkWs8vcprWL" Name="BufferType" Kind="InputPin" IsHidden="true" />
               </Node>
               <ControlPoint Id="HvPrVuvyQn0LKrQuFCn9fk" Bounds="442,122" />
               <ControlPoint Id="QNfx3rwuQnjN4UuWZyGug8" Bounds="438,551" />
@@ -20388,6 +20403,7 @@
                 <Pin Id="NDuDT2TFjZoNccRRBysmkL" Name="Buffer" Kind="InputPin" />
                 <Pin Id="KKtTWp2tsHRMDPZrKjSElo" Name="Type" Kind="InputPin" IsHidden="true" />
                 <Pin Id="CGYrl6NAb8KOIyaoMeNdHv" Name="Output" Kind="OutputPin" />
+                <Pin Id="KS0aicfACFdPoqloRrgZLo" Name="BufferType" Kind="InputPin" IsHidden="true" />
               </Node>
               <Node Bounds="776,987,52,19" Id="Ngm1l7KaLMDLMf91MxrHiN">
                 <p:NodeReference LastCategoryFullName="Fuse.Buffer" LastDependency="Fuse.Core.vl">
@@ -20692,6 +20708,7 @@
                 <Pin Id="LtmnHhjDtmmPjc8A9VqdW2" Name="Buffer" Kind="InputPin" />
                 <Pin Id="KVH9oNYqXxFNvMhHz7Cw8n" Name="Output" Kind="OutputPin" />
                 <Pin Id="GJvsdQGHPXXMnprGeINRNa" Name="Type" Kind="InputPin" IsHidden="true" />
+                <Pin Id="BLyLpRyomuNMQQnDbRnAfZ" Name="BufferType" Kind="InputPin" IsHidden="true" />
               </Node>
               <Node Bounds="318,768,50,19" Id="StXA3brDfoeNzJddh6Zn0d">
                 <p:NodeReference LastCategoryFullName="Fuse.Buffer" LastDependency="Fuse.Core.vl">
@@ -20990,6 +21007,7 @@
                 <Pin Id="HiVvnXwp1aUMCY11TJPhjw" Name="Buffer" Kind="InputPin" />
                 <Pin Id="UkJz1wHqskFQD5E01CJr39" Name="Type" Kind="InputPin" IsHidden="true" />
                 <Pin Id="Pj2HJacYHfjNq35oeUiDNU" Name="Output" Kind="OutputPin" />
+                <Pin Id="RxpyM4IrKECQMp19BFIsgg" Name="BufferType" Kind="InputPin" IsHidden="true" />
               </Node>
               <Pad Id="SsHjlzHB9KnNnyXAi4eIQh" Comment="Element Count" Bounds="544,555,35,15" ShowValueBox="true" isIOBox="true" Value="1">
                 <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
@@ -22945,6 +22963,7 @@
                 <Pin Id="Vtl6y3qiiGYO2Etw6zdpxL" Name="Buffer" Kind="InputPin" />
                 <Pin Id="TvOaz8SJUP7N7GVPkunEEv" Name="Output" Kind="OutputPin" />
                 <Pin Id="OSpMpG0MnukNYYaTEYLVuG" Name="Type" Kind="InputPin" IsHidden="true" />
+                <Pin Id="PPlue4ewHBMMpNwbyRVKmX" Name="BufferType" Kind="InputPin" IsHidden="true" />
               </Node>
               <Node Bounds="496,1877,94,19" Id="ARpVu96uLCOOdqgG681a8v">
                 <p:NodeReference LastCategoryFullName="Fuse.Compute" LastDependency="Fuse.Compute.vl">
@@ -23172,6 +23191,7 @@
                 <Pin Id="JabL9HeeTlyQAdhJKBAJ03" Name="Buffer" Kind="InputPin" />
                 <Pin Id="Esz9NcnvnalM9dUHyySE0N" Name="Output" Kind="OutputPin" />
                 <Pin Id="LURTh646seqLMu7tiPmx84" Name="Type" Kind="InputPin" IsHidden="true" />
+                <Pin Id="HWZZrDHBMT7M4iHu84IOh5" Name="BufferType" Kind="InputPin" IsHidden="true" />
               </Node>
               <Node Bounds="560,881,50,19" Id="QZq6I8OEFgyOptMI6njbLN">
                 <p:NodeReference LastCategoryFullName="Fuse.Buffer" LastDependency="Fuse.Core.vl">
@@ -23213,6 +23233,7 @@
                 <Pin Id="VXuXyDwoPfoPGC9qErICH0" Name="Buffer" Kind="InputPin" />
                 <Pin Id="TJQkElVIOPAObtGjI9PtBe" Name="Type" Kind="InputPin" IsHidden="true" />
                 <Pin Id="Qq89WTDvDxCOYKvfCEoA1a" Name="Output" Kind="OutputPin" />
+                <Pin Id="MuDywDNLbTqMeS7ShJOjeJ" Name="BufferType" Kind="InputPin" IsHidden="true" />
               </Node>
               <ControlPoint Id="VpFAoRiBpXbQT8ZCKArvvn" Bounds="504,697" />
               <Node Bounds="591,1671,65,19" Id="E273RC4dgj6OhbUaTAuYZ4">
@@ -23564,6 +23585,7 @@
                   <Pin Id="HEHP0n8N4WaQIaGhFbIils" Name="Buffer" Kind="InputPin" />
                   <Pin Id="LsCuXVXV3OdPNLPz8X4ZxO" Name="Type" Kind="InputPin" />
                   <Pin Id="QMGdTuEd3nnMFGKp5AFhwb" Name="Output" Kind="OutputPin" />
+                  <Pin Id="LfMkdPIGYh6MtlnuFs2tCB" Name="BufferType" Kind="InputPin" IsHidden="true" />
                 </Node>
                 <Node Bounds="416,553,71,19" Id="U0IMuIGKfJQPTmteSmlqa9">
                   <p:NodeReference LastCategoryFullName="Fuse.Buffer" LastDependency="Fuse.Core.vl">
@@ -23588,6 +23610,7 @@
                   <Pin Id="V4wg27yW7HbL2NPxSTF1le" Name="Buffer" Kind="InputPin" />
                   <Pin Id="F3PMI9ERySMQYwIXv08oFe" Name="Type" Kind="InputPin" />
                   <Pin Id="MCKdgSCOhPxP6ARu0ZGisn" Name="Output" Kind="OutputPin" />
+                  <Pin Id="CN1WOm6L8y3N2IxCY99PSP" Name="BufferType" Kind="InputPin" IsHidden="true" />
                 </Node>
                 <Node Bounds="523,469,65,19" Id="LJ4URleTf5YLsows6S78Nh">
                   <p:NodeReference LastCategoryFullName="Fuse.Buffer" LastDependency="Fuse.Core.vl">
@@ -29944,6 +29967,7 @@
               <Pin Id="E4vvfE6WaVgOhhL3N74fHL" Name="Buffer" Kind="InputPin" />
               <Pin Id="GV6QYBBLbmUNrqZG8VvntF" Name="Type" Kind="InputPin" />
               <Pin Id="QkoTqMbKQ2ROSEToBGeHFF" Name="Output" Kind="OutputPin" />
+              <Pin Id="IQ09ygVP5fHL2zHIW0yQbj" Name="BufferType" Kind="InputPin" IsHidden="true" />
             </Node>
             <Pad Id="DVkT6EC9eloPHk9VNPkFkg" SlotId="EHEDhPhrdVgLyjxkxQWZyW" Bounds="323,607" />
             <ControlPoint Id="P38TTEHF4mkNcYNjXTNdPn" Bounds="250,254" />
@@ -34223,6 +34247,7 @@
               <Pin Id="IqNAYKcd8kOPBw1wAVFCcN" Name="Buffer" Kind="InputPin" />
               <Pin Id="THEFvye0u3ALmFoluJ9tKg" Name="Type" Kind="InputPin" />
               <Pin Id="RZfAmKrvZWfMNbgICcpErl" Name="Output" Kind="OutputPin" />
+              <Pin Id="Gbjjd31wPBWMk7KMSvwV7z" Name="BufferType" Kind="InputPin" IsHidden="true" />
             </Node>
             <Node Bounds="2333,1384,65,19" Id="LFqCMMODMsjQAKJxYeNZYH">
               <p:NodeReference LastCategoryFullName="Fuse.Buffer" LastDependency="Fuse.Core.vl">
@@ -34809,6 +34834,7 @@
               <Pin Id="Qz5SgU5v5DYN9iSuwQC9cy" Name="Buffer" Kind="InputPin" />
               <Pin Id="OOHxDvIR7lPPEIdVyysNqp" Name="Type" Kind="InputPin" />
               <Pin Id="QupTW016vCLNGwvaxkEk54" Name="Output" Kind="OutputPin" />
+              <Pin Id="ERVIsBjPo1yN21FKziVo5b" Name="BufferType" Kind="InputPin" IsHidden="true" />
             </Node>
             <ControlPoint Id="P9FII35GUnIPEedCSmJVRF" Bounds="2068,932" />
             <Node Bounds="2109,965,55,19" Id="Tq8j3ex5rstOaBrLmyaa0q">
@@ -39089,6 +39115,7 @@
                 <Pin Id="GzZHvlCfHJwNrPI3QACbH8" Name="Buffer" Kind="InputPin" />
                 <Pin Id="UGW7mzSl5wzQDQoAjnfkwr" Name="Type" Kind="InputPin" />
                 <Pin Id="JAI6MKfW3zXOD1AzLq8bI0" Name="Output" Kind="OutputPin" />
+                <Pin Id="F8YRKgjiMlIMRtTtGYRXe2" Name="BufferType" Kind="InputPin" IsHidden="true" />
               </Node>
               <Node Bounds="877,705,104,96" Id="U692rzCExNFPRWD63S2Qzg">
                 <p:NodeReference LastCategoryFullName="Fuse.Control" LastDependency="Fuse.Core.vl">
@@ -39463,6 +39490,7 @@
                 <Pin Id="NdvsWMNkrYWLAdEGp6ymj8" Name="Buffer" Kind="InputPin" />
                 <Pin Id="LrOI3LTDaFvNKrmxbJss7p" Name="Type" Kind="InputPin" />
                 <Pin Id="U9RmJOy42bMOZ2uW25V5sO" Name="Output" Kind="OutputPin" />
+                <Pin Id="IOp45KzWaSDMSX0wpA6u9Y" Name="BufferType" Kind="InputPin" DefaultValue="Append" />
               </Node>
               <Pad Id="NdBlVPykwTPPQeFut1D6wW" Bounds="513,502">
                 <p:TypeAnnotation>
@@ -41011,6 +41039,7 @@
                 <Pin Id="GFnWCi9nwXgPlhn8eG2X61" Name="Buffer" Kind="InputPin" />
                 <Pin Id="RIkidm6TPviOFRD5ScV1UH" Name="Type" Kind="InputPin" IsHidden="true" />
                 <Pin Id="PUM6fZ9gliJPZONuS36PKH" Name="Output" Kind="OutputPin" />
+                <Pin Id="TGe1KZrDDobNhD8JQKEZWI" Name="BufferType" Kind="InputPin" IsHidden="true" />
               </Node>
               <Node Bounds="532,421,53,19" Id="Ol9OJzly84tONz2dSfZKvX">
                 <p:NodeReference LastCategoryFullName="Fuse.Particles.Attribute" LastDependency="VL.Fuse.vl">
@@ -41530,6 +41559,7 @@
                 <Pin Id="R8TWSA3bVgbOpBLyU7fCae" Name="Buffer" Kind="InputPin" />
                 <Pin Id="E5gOdobWzZ0OoKrGIKK5kc" Name="Type" Kind="InputPin" />
                 <Pin Id="Rg32S0M5BeNLPU5VqFBq05" Name="Output" Kind="OutputPin" />
+                <Pin Id="UggeQbHb0uUOru8CnNhGGt" Name="BufferType" Kind="InputPin" DefaultValue="RW" />
               </Node>
               <Node Bounds="909,801,102,19" Id="UcP7GSSVhOrO83X8TXUV5I">
                 <p:NodeReference LastCategoryFullName="Fuse.Compute" LastDependency="Fuse.Core.vl">
@@ -43410,7 +43440,6 @@
             <Link Id="JUmBvd800PbNjKGdzlVp7M" Ids="R4oo2jf1R4PN6C5ASYHvvE,HxLdvhiOZlcLU1bZLKLInS" />
             <Link Id="Nn22mCGEwtmOPJBZQ6gAMu" Ids="HxLdvhiOZlcLU1bZLKLInS,J3YZ1205BcJLzaKHg6QQWX" IsHidden="true" />
             <Link Id="HISH80wOXmoNNIVBp60uZt" Ids="AIO2ltByKQaMQPqtmdkBfv,SVxTLV4h0q6L7XoQmMN620" />
-            <Link Id="GHoIHgslK9FNfbnVeyl8rV" Ids="NGOVRqsOTdmLu35SiAeenT,PMvZR6nxvI4PG4qJNZC9M7" />
             <Link Id="AI05gx1XdLvQFDisAbWXAo" Ids="K56IKHliXQvOvpYhFO8Blz,IU6iuaSXBXKO7uYhhrt3kS" />
             <Link Id="LHDUWgsQvX5LxvPO6yeuFI" Ids="FRpP7I4Q5ElLTx2mHyDyxb,BxbnQ7sVCc4NE5JvObTlNQ" />
             <Link Id="SHxqj4CmGnGMqPzjLo6d5X" Ids="AEjE6vfb1oRLqLLcZworni,NHo5cVIKgDDLZpOrzqeZH6" />
@@ -43520,6 +43549,7 @@
             <Link Id="UtyHaJMeJeqLK8ZTGcPzYN" Ids="CwMRf1371ZsPYqvosKEu9E,GpEjd3RdG2MOBdzdoamUYZ" IsFeedback="true" />
             <Link Id="MmYdP8pdfzRQJy1L7j3h73" Ids="UC2Pc9REhxdM56qSdD950m,GpEjd3RdG2MOBdzdoamUYZ" />
             <Link Id="HUcSSxnr8gZQRBEBEvAbBU" Ids="GpEjd3RdG2MOBdzdoamUYZ,OZ3vazKnN6CMEDVybvg8wR" />
+            <Link Id="N9k2Y0F0G54MLUAXlSQVs2" Ids="NGOVRqsOTdmLu35SiAeenT,PMvZR6nxvI4PG4qJNZC9M7" />
           </Patch>
         </Node>
         <!--
@@ -43794,6 +43824,7 @@
                 <Pin Id="KkxAuEk1nU9NNHLge0bFAc" Name="Buffer" Kind="InputPin" />
                 <Pin Id="IfbsnKr45QbQFy1RvVyw7R" Name="Type" Kind="InputPin" />
                 <Pin Id="U5Xf9dHBIO1LhRWdPB3YsM" Name="Output" Kind="OutputPin" />
+                <Pin Id="FiGzWygHNzxLG9OXq60zru" Name="BufferType" Kind="InputPin" IsHidden="true" />
               </Node>
               <Node Bounds="413,373,83,26" Id="VmfC4nqyljONMz2B7IySGT">
                 <p:NodeReference LastCategoryFullName="Fuse.Compute.NeighborGrid.SpatialHash" LastDependency="Fuse.Compute.vl">
@@ -43817,6 +43848,7 @@
                 <Pin Id="UXIPb7wAnLmMv5cvWgjwHn" Name="Buffer" Kind="InputPin" />
                 <Pin Id="ECf4yAALzR9Lcbu7au6cSy" Name="Type" Kind="InputPin" />
                 <Pin Id="FZkhPOlyDc0QH1gzKhuobT" Name="Output" Kind="OutputPin" />
+                <Pin Id="FSelqJzRxMWLjQ3sVb4PQh" Name="BufferType" Kind="InputPin" IsHidden="true" />
               </Node>
               <ControlPoint Id="FYy0OSbQgaQLXSPDPy8Wbo" Bounds="223,391" />
               <Pad Id="ASu48uvhmrXLM8TmUn9bAk" Bounds="223,428" />
@@ -43929,13 +43961,25 @@
                 <Pin Id="Vr5ccSPB5gAMXBxl65uNqf" Name="Node Context" Kind="InputPin" />
                 <Pin Id="Ez6SqQlQqWDLWCQ8adTpRu" Name="Output" Kind="StateOutputPin" />
               </Node>
+              <Node Bounds="401,449,28,19" Id="Sj1oShND3eXNJEIwksqvon">
+                <p:NodeReference LastCategoryFullName="Fuse.Value.Conversion" LastDependency="Fuse.Core.vl">
+                  <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                  <CategoryReference Kind="Category" Name="Conversion" NeedsToBeDirectParent="true">
+                    <p:OuterCategoryReference Kind="Category" Name="Value" NeedsToBeDirectParent="true" />
+                  </CategoryReference>
+                  <Choice Kind="ProcessAppFlag" Name="To" />
+                </p:NodeReference>
+                <Pin Id="KbEqStyvdNnOebKF2LmraC" Name="Node Context" Kind="InputPin" IsHidden="true" />
+                <Pin Id="EOOkGEF1gRFLY8Q7z4xc2g" Name="x" Kind="InputPin" />
+                <Pin Id="B3tIojdhLPROH2TVzgPtm4" Name="Output" Kind="OutputPin" />
+                <Pin Id="UWhIqKpBFzPNUfYD5lNxp9" Name="Conversion" Kind="OutputPin" />
+              </Node>
             </Canvas>
             <ProcessDefinition Id="DniQE36WzJ5PDgLLcwIEuL">
               <Fragment Id="Fek4szvlgijMNmVyCxfOdi" Patch="EN9Fi4lQkL9LXJtNoxFqon" Enabled="true" />
               <Fragment Id="Q5HDdkTySVOMq7bQJsHtP3" Patch="EfsFLtEptYpN8XhX3CORAH" Enabled="true" />
             </ProcessDefinition>
             <Link Id="QM9LcxJsUFvO18AK6bwaVF" Ids="VRkuor6q6i1OVHu0QAqVHY,DGpIc27Ygz5MLP3SpFxPKK" IsHidden="true" />
-            <Link Id="VpQG6vJNBCFPHnqlzME5Qx" Ids="Jj0AOGUdVYIM4f2sbjh7lx,VRkuor6q6i1OVHu0QAqVHY" />
             <Link Id="KHCIinPYMVyMWEHb1rz7lJ" Ids="Ez6SqQlQqWDLWCQ8adTpRu,Jj0AOGUdVYIM4f2sbjh7lx" />
             <Patch Id="EN9Fi4lQkL9LXJtNoxFqon" Name="Create" ParticipatingElements="ArRSGIIlF7NLbglmmVKjPb,KHCIinPYMVyMWEHb1rz7lJ" />
             <Patch Id="EfsFLtEptYpN8XhX3CORAH" Name="Update">
@@ -43950,6 +43994,8 @@
                 </p:TypeAnnotation>
               </Pin>
             </Patch>
+            <Link Id="AM6uSTzC2l0NrQmyrIjjHC" Ids="Jj0AOGUdVYIM4f2sbjh7lx,EOOkGEF1gRFLY8Q7z4xc2g" />
+            <Link Id="MQbt6EYNldSLwy4lDfCvsH" Ids="B3tIojdhLPROH2TVzgPtm4,VRkuor6q6i1OVHu0QAqVHY" />
           </Patch>
         </Node>
         <!--
@@ -44317,6 +44363,7 @@
                 <Pin Id="BHcwJCf7t73L36T4GckoKm" Name="Buffer" Kind="InputPin" />
                 <Pin Id="RzWRhaET1iLLbcnv6ZN9KI" Name="Type" Kind="InputPin" />
                 <Pin Id="D4x2FV5mqCpLPKb1QQrylS" Name="Output" Kind="OutputPin" />
+                <Pin Id="Lsp1w79HHzYPavUmmw1VRx" Name="BufferType" Kind="InputPin" IsHidden="true" />
               </Node>
               <Node Bounds="899,801,102,19" Id="QI7IKBS7gMxMn1tMpt26l5">
                 <p:NodeReference LastCategoryFullName="Fuse.Compute" LastDependency="Fuse.Core.vl">
@@ -45030,6 +45077,7 @@
                 <Pin Id="RjqF2jynJXJOjiL13FwjUQ" Name="Buffer" Kind="InputPin" />
                 <Pin Id="P4dDN9e0796PkjaprL4InN" Name="Type" Kind="InputPin" IsHidden="true" />
                 <Pin Id="QCu4jLmS1ysLoEHEuSRj74" Name="Output" Kind="OutputPin" />
+                <Pin Id="Gqygy2V53VJO3YrRxkT4v0" Name="BufferType" Kind="InputPin" IsHidden="true" />
               </Node>
               <Node Bounds="637,993,52,19" Id="LCxrz2NAWffLnBstuL64lB">
                 <p:NodeReference LastCategoryFullName="Fuse.Buffer" LastDependency="Fuse.Core.vl">
@@ -45055,6 +45103,7 @@
                 <Pin Id="U3b6caevKxgMoumoEwXvxa" Name="Buffer" Kind="InputPin" />
                 <Pin Id="JFrC7aGCncWPOMRBg08cjt" Name="Type" Kind="InputPin" IsHidden="true" />
                 <Pin Id="HTJNxZCPtJgPDrult3bPmJ" Name="Output" Kind="OutputPin" />
+                <Pin Id="VTDbk0Oep4pMZr0Q0kpP23" Name="BufferType" Kind="InputPin" IsHidden="true" />
               </Node>
               <Node Bounds="557,1178,50,19" Id="PIj2tb3d55nLO4zB7YY040">
                 <p:NodeReference LastCategoryFullName="Fuse.Buffer" LastDependency="Fuse.Core.vl">
@@ -47740,6 +47789,7 @@
               <Pin Id="FYhoFQZMwEiQLyTx51uIaU" Name="Buffer" Kind="InputPin" />
               <Pin Id="GjG4DgL0ogRL8O7nZfLBFk" Name="Type" Kind="InputPin" />
               <Pin Id="S5wglXH8vryPhFpFg2TUFr" Name="Output" Kind="OutputPin" />
+              <Pin Id="Kffcb72At1EOgAdcpvrczs" Name="BufferType" Kind="InputPin" IsHidden="true" />
             </Node>
             <Pad Id="MKTgHpuyg5IMjE0XFlAgqx" SlotId="DhIOxxXeTu6LFHB6y15IZh" Bounds="521,189" />
             <Node Bounds="519,131,126,19" Id="EgpBrXit9h7OqKft45YTYR">
@@ -48196,6 +48246,7 @@
               <Pin Id="NSAI4eCgeeyLfl8nTbu3Nx" Name="Buffer" Kind="InputPin" />
               <Pin Id="RXVALXBBQM5M05VEcRZyqd" Name="Type" Kind="InputPin" />
               <Pin Id="BjKCitG3ZaLNuidb7XwqRn" Name="Output" Kind="OutputPin" />
+              <Pin Id="CNAh9r8hjbUPZQtHEDivAj" Name="BufferType" Kind="InputPin" IsHidden="true" />
             </Node>
             <Pad Id="ActHq41HcPbN2fixc9h4ft" SlotId="D0zVEf6HIyBPsZsVFfLzwf" Bounds="213,467" />
             <ControlPoint Id="VdIfqX2ybYXLfCwWg56ejK" Bounds="220,148" />
@@ -48333,8 +48384,8 @@
   <DocumentDependency Id="D8q0vwsiUKdOoERnDUoBef" Location="./Fuse.Domain.vl" />
   <DocumentDependency Id="EWTqfY5EJYjMbUeIjqGgY2" Location="./Fuse.Draw.vl" />
   <NugetDependency Id="HdDLzLKkmiQNzN13tordiy" Location="VL.Fuse" Version="0.0.0.0" />
-  <NugetDependency Id="K1ivwIDhGncNI3oByJQZLt" Location="VL.Stride" Version="2024.6.7-0136-ga34ff89f71" />
-  <NugetDependency Id="FeMTrTYBJofOV4p6owmY6u" Location="VL.Stride.Runtime" Version="2024.6.7-0136-ga34ff89f71" />
+  <NugetDependency Id="K1ivwIDhGncNI3oByJQZLt" Location="VL.Stride" Version="2024.6.7-0177-ge02e8501bb" />
+  <NugetDependency Id="FeMTrTYBJofOV4p6owmY6u" Location="VL.Stride.Runtime" Version="2024.6.7-0177-ge02e8501bb" />
   <NugetDependency Id="QbMI0nsWNDtOu0R168jMwc" Location="VL.IO.PLY" Version="0.0.8-alpha" />
   <PlatformDependency Id="G7UGklUGdzROuhePKKYRia" Location="../lib/net8.0/Fuse.dll" />
 </Document>
