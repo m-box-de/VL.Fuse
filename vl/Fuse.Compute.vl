@@ -40668,6 +40668,7 @@
                 <Pin Id="JklccUxuGpcOAB5CN1ugxQ" Name="Indices" Kind="InputPin" />
                 <Pin Id="LTHXDrQeJNLPTuyzGG16IL" Name="Thread Group Size" Kind="InputPin" />
                 <Pin Id="OYgWzSmzomrNh2B7y6c8hV" Name="Output" Kind="StateOutputPin" />
+                <Pin Id="Bzp2RXsPQFxQaQ58P4NWZ8" Name="index" Kind="OutputPin" />
               </Node>
               <Pad Id="HLP7Lu9ENMCPRbd0FkWCGM" SlotId="Nc25uwtp2o9O3w8RCDV47R" Bounds="1358,493" />
               <ControlPoint Id="By0rH2wziwyPLrBweYJkqR" Bounds="1358,562" />
@@ -49379,15 +49380,20 @@
             <ControlPoint Id="QPXILXxcuKPLgqMMVLxXsB" Bounds="919,593" />
             <ControlPoint Id="LeZXGH5EjdtOEpE6nmavV5" Bounds="921,699" />
             <Overlay Id="NKx38ZZVJQCLI9rV2lcP8j" Name="GetChangedTick&#xD;&#xA;(IDispatcherProvider)" Bounds="806,508,257,207" />
+            <Pad Id="FXyiWCJO6pSOEqknW0MCEB" SlotId="I4raXot3pwzNFh3IOKL5l9" Bounds="319,726" />
+            <ControlPoint Id="SCuII6EWRTgLX3pv1TmAz7" Bounds="432,793" />
+            <Node Bounds="430,744,22,19" Id="MBFpXU8vnsBPcqf32xgMJi">
+              <p:NodeReference LastCategoryFullName="Fuse.Value.Swizzle" LastDependency="VL.Fuse.vl">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <CategoryReference Kind="Category" Name="Fuse" />
+                <Choice Kind="ProcessAppFlag" Name="x (int)" />
+              </p:NodeReference>
+              <Pin Id="Of0tcCXE69MLkwYBLYKNNb" Name="Node Context" Kind="InputPin" IsHidden="true" />
+              <Pin Id="Q1ReGLVHGD9Mz6gqmQN603" Name="Input" Kind="InputPin" />
+              <Pin Id="TPu3HjlAMciLPvlcVJQTYT" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Pad Id="A9nvLbuqLfsMd4j0miu67u" SlotId="I4raXot3pwzNFh3IOKL5l9" Bounds="432,719" />
           </Canvas>
-          <ProcessDefinition Id="PrznKJryrPBO7EYEXTJZEV" HasStateOut="true">
-            <Fragment Id="J8vro6qZtKMM8jGXUMG5eN" Patch="FYFxtFpMf3pOCOI3r3KqjK" Enabled="true" />
-            <Fragment Id="O4UVIG7mhjFM0OtnjklDDV" Patch="MYnpsxA7mZePxDKJkqDqDr" />
-            <Fragment Id="SAnnZ1RQrtJMppAYxLfhc1" Patch="F5dRr0KquGFOXFicVqeB19" Enabled="true" />
-            <Fragment Id="OpjZlrUNyyuNgHSppGJtV4" Patch="E1jJ9UQCnSdMDBXZQ3PT06" />
-            <Fragment Id="BjUaXHA5S1SLKVd2e5GpoV" Patch="GZ6GyAWVqiwNwoy45tBmwc" />
-            <Fragment Id="JZSoSxJVC5wPefEeJ7tBYI" Patch="OYMjClMg8NZLTdNlk3FVCL" />
-          </ProcessDefinition>
           <Link Id="CmZH2zJlZL4NAszo2Ydv4x" Ids="PQ7k3p2iY5xNB1LurzVRCp,NTuELeo5mEALh6aahtQNWy" IsHidden="true" />
           <Slot Id="TG0KCN98WNAPpK4KA9iG82" Name="Dispatch Info" />
           <Link Id="P7J1JUaLx5sLiUFarWLHAG" Ids="EajDF9PB4SJPAdpGMCghih,KG5sTjO0w9bNSLxTb0aHQz" />
@@ -49444,6 +49450,23 @@
           <Link Id="Gw89TLcSKtpMqjPxrNB273" Ids="LeZXGH5EjdtOEpE6nmavV5,VKFTRu0lI6BP7gNF0hcDXa" IsHidden="true" />
           <Patch Id="OYMjClMg8NZLTdNlk3FVCL" Name="GetChangedTick">
             <Pin Id="VKFTRu0lI6BP7gNF0hcDXa" Name="Output" Kind="OutputPin" />
+          </Patch>
+          <ProcessDefinition Id="PrznKJryrPBO7EYEXTJZEV" HasStateOut="true">
+            <Fragment Id="J8vro6qZtKMM8jGXUMG5eN" Patch="FYFxtFpMf3pOCOI3r3KqjK" Enabled="true" />
+            <Fragment Id="SAnnZ1RQrtJMppAYxLfhc1" Patch="F5dRr0KquGFOXFicVqeB19" Enabled="true" />
+            <Fragment Id="O4UVIG7mhjFM0OtnjklDDV" Patch="MYnpsxA7mZePxDKJkqDqDr" />
+            <Fragment Id="OpjZlrUNyyuNgHSppGJtV4" Patch="E1jJ9UQCnSdMDBXZQ3PT06" />
+            <Fragment Id="BjUaXHA5S1SLKVd2e5GpoV" Patch="GZ6GyAWVqiwNwoy45tBmwc" />
+            <Fragment Id="JZSoSxJVC5wPefEeJ7tBYI" Patch="OYMjClMg8NZLTdNlk3FVCL" />
+            <Fragment Id="UkTrh6MwnDwN3vAVcUgoWH" Patch="QDKDYmpI4N4P27r6DSvLQQ" Enabled="true" />
+          </ProcessDefinition>
+          <Slot Id="I4raXot3pwzNFh3IOKL5l9" Name="index" />
+          <Link Id="B8jyzotMBpkQHb7yovoaX5" Ids="CQJkCBHEs5UNCnZI4DbCgl,FXyiWCJO6pSOEqknW0MCEB" />
+          <Link Id="U1xQ44Qh1vbO3DvxxBYkvw" Ids="SCuII6EWRTgLX3pv1TmAz7,MYsgNU8qnWsLehrOsOrMhb" IsHidden="true" />
+          <Link Id="GFdwfE04zsULy67Ig9eDUR" Ids="TPu3HjlAMciLPvlcVJQTYT,SCuII6EWRTgLX3pv1TmAz7" />
+          <Link Id="VLMP9snuVsPObukDQVqLVr" Ids="A9nvLbuqLfsMd4j0miu67u,Q1ReGLVHGD9Mz6gqmQN603" />
+          <Patch Id="QDKDYmpI4N4P27r6DSvLQQ" Name="GetIndexX">
+            <Pin Id="MYsgNU8qnWsLehrOsOrMhb" Name="index" Kind="OutputPin" />
           </Patch>
         </Patch>
       </Node>
