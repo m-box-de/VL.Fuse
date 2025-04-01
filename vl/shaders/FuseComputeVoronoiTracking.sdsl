@@ -69,12 +69,12 @@ shader FuseComputeVoronoiTracking {
         int maxNeighbors
     ) {
         if (candidateId == particleId) return;
-        if (NeighborStates[candidateId] != particleState) return;
+        //if (NeighborStates[candidateId] != particleState) return;
             
         float3 deltaPos = positions[candidateId] - pos;
         float distSq = dot(deltaPos, deltaPos);
             
-        if (distSq > maxDistSq) return;
+        //if (distSq > maxDistSq) return;
                 
         InsertNeighbor(NeighborIds, Distances, currentCount, particleId, candidateId, distSq, maxNeighbors);
     }
@@ -93,6 +93,9 @@ shader FuseComputeVoronoiTracking {
         int randomSamples,
         int particleCount
     ) {
+        //if(NeighborStates[particleId] != particleState)return 0;
+
+
         float3 pos = positions[particleId];
         int baseIndex = particleId * maxNeighbors;
         
@@ -107,9 +110,29 @@ shader FuseComputeVoronoiTracking {
         int prevCount = neighborCount;
         int currentCount = 0;  // Local variable to track count
 
+        // Clear the neighbor buffer to ensure invalid entries are marked
+        for (int i = 0; i < maxNeighbors; i++) {
+            NeighborIds[baseIndex + i] = -1;
+            Distances[baseIndex + i] = 1000000.0;  // Or some very large value
+        }
+
         float maxDistSq = maxDistance * maxDistance;
-        
-        if(NeighborStates[particleId] != particleState)return currentCount;
+
+        /*
+
+        // In UpdateNeighbors, after clearing neighbors but before other processing:
+int directNeighbor1 = (particleId + 1) % particleCount;
+int directNeighbor2 = (particleId + particleCount - 1) % particleCount;
+
+// Directly add these as neighbors
+float3 delta1 = positions[directNeighbor1] - pos;
+float3 delta2 = positions[directNeighbor2] - pos;
+float dist1 = dot(delta1, delta1);
+float dist2 = dot(delta2, delta2);
+
+CheckCandidate(positions,NeighborIds,NeighborStates, Distances, currentCount, particleId, particleState,directNeighbor1,pos, dist1, maxNeighbors);
+CheckCandidate(positions,NeighborIds,NeighborStates, Distances, currentCount, particleId, particleState,directNeighbor2,pos, dist2, maxNeighbors);
+        */
         
         // Recheck previous neighbors first
         for (int i1 = 0; i1 < prevCount; i1++) {
@@ -128,6 +151,8 @@ shader FuseComputeVoronoiTracking {
                 maxNeighbors
             );
         }
+
+
 
         // Phase 2: Check neighbors of neighbors (second-order connections)
         for (int i2 = 0; i2 < min(prevCount, maxNeighbors/2); i2++) {
@@ -160,27 +185,250 @@ shader FuseComputeVoronoiTracking {
             }
         }
         
-        // Add random samples to potentially find new closer neighbors
-        int state = particleId + frameCount * 719393;
-        int rngState = pcg_random(state);
+       
         for (int i2 = 0; i2 < randomSamples; i2++) {
-            int candidateId = int(rand(rngState) * particleCount);
-            CheckCandidate(
-                positions, 
-                NeighborIds,
-                NeighborStates,
-                Distances, 
-                currentCount, 
-                particleId,
-                particleState,
-                candidateId, 
-                pos, 
-                maxDistSq, 
-                maxNeighbors
-            );
+            int sample_seed = particleId ^ (frameCount * 719393) ^ (i2 * 104729);
+            int rngState = pcg_random(sample_seed);
+    
+            // Combine random value with stratified component
+            float rand_val = rand(rngState);
+    
+            // Add stratification to ensure sampling across the range
+            float stratified_component = float(i2) / randomSamples;
+            float combined = fmod(rand_val + stratified_component, 1.0);
+    
+        int candidateId = int(combined * particleCount);
+                CheckCandidate(
+                    positions, 
+                    NeighborIds,
+                    NeighborStates,
+                    Distances, 
+                    currentCount, 
+                    particleId,
+                    particleState,
+                    candidateId, 
+                    pos, 
+                    maxDistSq, 
+                    maxNeighbors
+                );
+            }
+        //         NeighborIds[currentCount] = particleId +1;
+        // return currentCount + 1;
+        return currentCount;
+/*
+        return currentCount;
+        */
+    }
+
+    // Returns an defaultValue if no neighbors are available.
+    int GetClosestNeighborToPosition(
+        RWStructuredBuffer<float3> positions,
+        RWStructuredBuffer<int> NeighborIds, 
+        float3 queryPosition, 
+        int startIndex, 
+        int neighborCount,
+        int defaultValue
+    ){
+        if (neighborCount == 0)
+            return defaultValue; // No neighbor available
+        
+        int bestNeighbor = 0;
+        float bestDistSq = 1000000.0; // Start with maximum possible float value
+        
+        // Loop over all neighbors in the list
+        for (int i = 0; i < neighborCount; i++)
+        {
+            // Fetch the neighbor's ID from the global neighbor buffer.
+            int neighborID = NeighborIds[startIndex + i];
+            // Retrieve the neighbor's position from the global positions buffer.
+            float3 neighborPos = positions[neighborID];
+            // Compute squared distance to the query position.
+            float distSq = dot(neighborPos - queryPosition, neighborPos - queryPosition);
+            
+            // If this neighbor is closer, update the best match.
+            if (distSq < bestDistSq)
+            {
+                bestDistSq = distSq;
+                bestNeighbor = neighborID;
+            }
+        }
+        
+        return bestNeighbor;
+    }
+
+    // Returns an defaultValue if no neighbors are available.
+    int GetFurthestNeighborFromPosition(
+        RWStructuredBuffer<float3> positions,
+        RWStructuredBuffer<int> NeighborIds, 
+        float3 queryPosition, 
+        int startIndex, 
+        int neighborCount,
+        int defaultValue
+    ){
+        if (neighborCount == 0)
+            return defaultValue; // No neighbor available
+        
+        int bestNeighbor = 0;
+        float bestDistSq = 0.0; // Start with maximum possible float value
+        
+        // Loop over all neighbors in the list
+        for (int i = 0; i < neighborCount; i++)
+        {
+            // Fetch the neighbor's ID from the global neighbor buffer.
+            int neighborID = NeighborIds[startIndex + i];
+            // Retrieve the neighbor's position from the global positions buffer.
+            float3 neighborPos = positions[neighborID];
+            // Compute squared distance to the query position.
+            float distSq = dot(neighborPos - queryPosition, neighborPos - queryPosition);
+            
+            // If this neighbor is closer, update the best match.
+            if (distSq > bestDistSq)
+            {
+                bestDistSq = distSq;
+                bestNeighbor = neighborID;
+            }
+        }
+        
+        return bestNeighbor;
+    }
+/*
+    uint GetNextNeighborMultiHop_FullDepth(
+        RWStructuredBuffer<float3> positions,
+        RWStructuredBuffer<int> NeighborIds, 
+        RWStructuredBuffer<int> NeighborCounts, 
+        int currentParticleID, 
+        float3 targetPos, 
+        int lookaheadDepth,
+        int maxNeighbors,
+        float maxDistanceSq
+    )*/
+
+    int GetNextNeighborTrajectory(
+        RWStructuredBuffer<float> Distances,
+        RWStructuredBuffer<int> NeighborIds, 
+        RWStructuredBuffer<int> NeighborCounts, 
+        int maxNeighbors,
+        int currentParticleID, 
+        int lookaheadDepth)
+    {
+        // Use precalculated distance
+        float bestFinalDistSq = Distances[currentParticleID];
+        int bestCandidate = currentParticleID;
+
+        int startIndex = currentParticleID * maxNeighbors;
+        int neighborCount = NeighborCounts[currentParticleID];
+
+        // Loop over immediate neighbors
+        for (int i = 0; i < neighborCount; i++)
+        {
+            int candidate = NeighborIds[startIndex + i];
+            int simulatedCandidate = candidate;
+
+            // Run full lookahead
+            for (int hop = 0; hop < lookaheadDepth; hop++)
+            {
+                int simStartIndex = simulatedCandidate * maxNeighbors;
+                int simNeighborCount = NeighborCounts[simulatedCandidate];
+                
+                // Skip if this particle has no neighbors
+                if (simNeighborCount == 0)
+                    break;
+
+                // Find the best neighbor at this hop using precalculated distances
+                float bestSimDistSq = Distances[simulatedCandidate];
+                int bestSimCandidate = simulatedCandidate;
+
+                for (uint j = 0; j < simNeighborCount; j++)
+                {
+                    int neighborCandidate = NeighborIds[simStartIndex + j];
+                    
+                    // Avoid self-references
+                    if (neighborCandidate == simulatedCandidate)
+                        continue;
+                        
+                    float neighborCandidateDistSq = Distances[neighborCandidate];
+                    
+                    if (neighborCandidateDistSq < bestSimDistSq)
+                    {
+                        bestSimDistSq = neighborCandidateDistSq;
+                        bestSimCandidate = neighborCandidate;
+                    }
+                }
+                
+                // If we couldn't find a better neighbor, stop the search
+                if (bestSimCandidate == simulatedCandidate)
+                    break;
+                    
+                simulatedCandidate = bestSimCandidate;
+            }
+
+            // Check if the final simulated candidate is an improvement
+            float finalDistSq = Distances[simulatedCandidate];
+            
+            if (finalDistSq < bestFinalDistSq)
+            {
+                bestFinalDistSq = finalDistSq;
+                bestCandidate = candidate; // Return the immediate neighbor that started this better path
+            }
         }
 
-        return currentCount;
+        return bestCandidate;
+    } 
+
+    void ProcessNeighborsCore(
+        uint particleID,
+        uint neighborsPerParticleIn,
+        RWStructuredBuffer<float3> positions,
+        RWStructuredBuffer<int> neighborIDs,
+        RWStructuredBuffer<float> pathCosts,
+        RWStructuredBuffer<int> nextIDs
+    ) {
         
+        // Get current particle's cost and next ID
+        float currentCost = pathCosts[particleID];
+        
+        // Skip if this is a target (cost is already 0)
+        if (currentCost == 0.0f)
+            return;
+        
+        // Get current particle's position
+        float3 currentPosition = positions[particleID];
+        
+        // Track the best path found
+        float bestCost = currentCost;
+        int bestNextID = nextIDs[particleID];
+        
+        // Check all neighbors for a better path
+        for (uint n = 0; n < neighborsPerParticleIn; n++) {
+            uint neighborIndex = particleID * neighborsPerParticleIn + n;
+            int neighborID = neighborIDs[neighborIndex];
+
+            // Bounds check for neighborID
+            if (neighborID < 0)
+                continue;
+                
+            // Get neighbor's cost and position
+            float neighborCost = pathCosts[neighborID];
+            float3 neighborPosition = positions[neighborID];
+            
+            // Calculate distance to this neighbor
+            float3 diff = currentPosition - neighborPosition;
+            float distance = length(diff);
+            
+            // Total cost through this neighbor
+            float totalCost = distance + neighborCost;
+            
+            // If this path is better, update
+            if (totalCost < bestCost) {
+                bestCost = totalCost;
+                bestNextID = neighborID;
+            }
+        }
+        
+        // Update particle's cost and next ID if we found a better path
+        if (bestCost < currentCost) {
+            pathCosts[particleID] = bestCost;
+            nextIDs[particleID] = bestNextID;
+        }
     }
 };
