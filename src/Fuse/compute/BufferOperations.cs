@@ -137,7 +137,53 @@ namespace Fuse.compute
             });
         }
     }
-    
+
+    public class BufferIncrementCounter<T> : ShaderNode<int>
+    {
+        private readonly IBufferInput<T> _buffer;
+
+        public BufferIncrementCounter(NodeContext nodeContext, IBufferInput<T> theBuffer, ShaderNode<int> theDefault) : base(nodeContext, "consumeBuffer", theDefault)
+        {
+            _buffer = theBuffer;
+            _buffer.BufferType = BufferType.RW;
+
+            SetInputs(new List<AbstractShaderNode> { theBuffer as AbstractShaderNode });
+        }
+
+        protected override string SourceTemplate()
+        {
+            const string shaderCode = "${structType} ${resultName} = (int)${bufferName}.IncrementCounter();";
+            return ShaderNodesUtil.Evaluate(shaderCode, new Dictionary<string, string>()
+            {
+                {"structType", TypeName()},
+                {"bufferName", _buffer.ID},
+            });
+        }
+    }
+
+    public class BufferDecrementCounter<T> : ShaderNode<int>
+    {
+        private readonly IBufferInput<T> _buffer;
+
+        public BufferDecrementCounter(NodeContext nodeContext, IBufferInput<T> theBuffer, ShaderNode<int> theDefault) : base(nodeContext, "consumeBuffer", theDefault)
+        {
+            _buffer = theBuffer;
+            _buffer.BufferType = BufferType.RW;
+
+            SetInputs(new List<AbstractShaderNode> { theBuffer as AbstractShaderNode });
+        }
+
+        protected override string SourceTemplate()
+        {
+            const string shaderCode = "${structType} ${resultName} = (int)${bufferName}.DecrementCounter();";
+            return ShaderNodesUtil.Evaluate(shaderCode, new Dictionary<string, string>()
+            {
+                {"structType", TypeName()},
+                {"bufferName", _buffer.ID},
+            });
+        }
+    }
+
     public class BufferGetDimensions<T> : ShaderNode<GpuVoid>
     {
         private readonly BufferInput<T> _buffer;
