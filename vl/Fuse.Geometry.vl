@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" xmlns:r="reflection" Id="DlkLpgWeKDyMtsyzTWkBms" LanguageVersion="2025.7.0-0170-gf0ee7a321e" Version="0.128">
+<Document xmlns:p="property" xmlns:r="reflection" Id="DlkLpgWeKDyMtsyzTWkBms" LanguageVersion="2025.7.0-0073-g6c68558bd9" Version="0.128">
   <Patch Id="ALpqjXEf369Pnuk64gmWrV">
     <Canvas Id="V8HBoVZNCZmPvIQ0NbkFQ5" DefaultCategory="Fuse.Geometry" CanvasType="FullCategory">
       <!--
@@ -763,7 +763,7 @@
                     <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
                   </p:ValueBoxSettings>
                 </Pad>
-                <Node Bounds="881,731,28,19" Id="AKj4bvGqC3AORU1HDBXInU">
+                <Node Bounds="889,781,28,19" Id="G8FcviH4aG3PA3zx7VUTxB">
                   <p:NodeReference LastCategoryFullName="Fuse.Value.Conversion" LastDependency="Fuse.Core.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <CategoryReference Kind="Category" Name="Conversion" NeedsToBeDirectParent="true">
@@ -771,10 +771,10 @@
                     </CategoryReference>
                     <Choice Kind="ProcessAppFlag" Name="To" />
                   </p:NodeReference>
-                  <Pin Id="CS32zavhAw8OGmhFMy68Ir" Name="Node Context" Kind="InputPin" IsHidden="true" />
-                  <Pin Id="Rrm9T1cWDjRMG21v1GDHAl" Name="x" Kind="InputPin" />
-                  <Pin Id="ARcsjNFKQDrMXEpMwK7pMN" Name="Output" Kind="OutputPin" />
-                  <Pin Id="EsmVwrSgFYmLS4APHEV3WX" Name="Conversion" Kind="OutputPin" />
+                  <Pin Id="ClWtV2Bghj5LcTlATQBx0J" Name="Node Context" Kind="InputPin" IsHidden="true" />
+                  <Pin Id="TCJdjLZ4hx1NbitalNZizl" Name="x" Kind="InputPin" />
+                  <Pin Id="HXDMzkxg4ASQAr2z2K1dkE" Name="Output" Kind="OutputPin" />
+                  <Pin Id="EeugcofNMfKP8FUlHRcSlR" Name="Conversion" Kind="OutputPin" />
                 </Node>
               </Patch>
             </Node>
@@ -890,8 +890,8 @@
             <Pin Id="UztvKZxcUkpPJD8INip83L" Name="Normal" Kind="OutputPin" Bounds="1146,1370" />
             <Pin Id="KdcA3N98LdEMRH5rzuXBMe" Name="UV" Kind="OutputPin" Bounds="1226,1369" />
           </Patch>
-          <Link Id="TxI45q3wikTQJ2eEMrZnAI" Ids="INxsaY81iltOYrrccQFpuk,Rrm9T1cWDjRMG21v1GDHAl" />
-          <Link Id="KNJ4DrPbhFbQWvm7ASXxNa" Ids="ARcsjNFKQDrMXEpMwK7pMN,RbhBdEfM50CK9sSRq8J73h" />
+          <Link Id="L4YMzeHQXxWQanvhcQtNLK" Ids="INxsaY81iltOYrrccQFpuk,TCJdjLZ4hx1NbitalNZizl" />
+          <Link Id="VG17h1IxwSPPGdGfJvqOh4" Ids="HXDMzkxg4ASQAr2z2K1dkE,RbhBdEfM50CK9sSRq8J73h" />
         </Patch>
       </Node>
       <!--
@@ -1726,7 +1726,7 @@
         </p:NodeReference>
         <Patch Id="M3nNaXWuAE9MSq2d3FnMBF">
           <Canvas Id="Du3fBBr9G0xLTvkFTY4vMy" CanvasType="Group">
-            <Node Bounds="893,593,263,504" Id="OgkvbQbYPP4L1f4Rlis4vo">
+            <Node Bounds="893,593,256,504" Id="OgkvbQbYPP4L1f4Rlis4vo">
               <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
                 <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
                 <Choice Kind="ProcessStatefulRegion" Name="Cache" />
@@ -1874,7 +1874,7 @@
                 <ControlPoint Id="FR4Ww6G83RKPFRwNx391Zw" Bounds="968,717" />
                 <ControlPoint Id="K8Zv0JsU7L3L8MgoW9GjvP" Bounds="1135,884" />
                 <ControlPoint Id="LyWnJ11SUIhOovAV3d6jGW" Bounds="1134,640" />
-                <Node Bounds="1117,830,28,19" Id="B10iwnOQC0nQDORYDJFAvJ">
+                <Node Bounds="1011,880,28,19" Id="FQ3DJPTYZ4JPpesHrd3c84">
                   <p:NodeReference LastCategoryFullName="Fuse.Value.Conversion" LastDependency="Fuse.Core.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <CategoryReference Kind="Category" Name="Conversion" NeedsToBeDirectParent="true">
@@ -1882,11 +1882,12 @@
                     </CategoryReference>
                     <Choice Kind="ProcessAppFlag" Name="To" />
                   </p:NodeReference>
-                  <Pin Id="UDDMObIdBreLCi3VArUkXO" Name="Node Context" Kind="InputPin" IsHidden="true" />
-                  <Pin Id="UBfnIrw7D1aPedbpvlmqe8" Name="x" Kind="InputPin" />
-                  <Pin Id="C9tH4LG4JeYLqPnd3u8H5G" Name="Output" Kind="OutputPin" />
-                  <Pin Id="ViChDfpnPeJPQalQCjm7nm" Name="Conversion" Kind="OutputPin" />
+                  <Pin Id="PiGERTkFGE9M3dKyeEY4SG" Name="Node Context" Kind="InputPin" IsHidden="true" />
+                  <Pin Id="NmyhnPeFZcJNrFCaoOs4KM" Name="x" Kind="InputPin" />
+                  <Pin Id="LQL8GuSpuUlQbwBEJiMAps" Name="Output" Kind="OutputPin" />
+                  <Pin Id="QKlcrScFlXPO0mmJF5speR" Name="Conversion" Kind="OutputPin" />
                 </Node>
+                <ControlPoint Id="SseCyq9RCb0Oj6bmr7OvmK" Bounds="1118,829" />
               </Patch>
             </Node>
             <ControlPoint Id="JgQS1ntQG70OhlzeSUY6QM" Bounds="1134,562" />
@@ -1974,8 +1975,8 @@
             <Pin Id="DLfE5W0BEviQPauaDgDCbz" Name="Position" Kind="OutputPin" />
             <Pin Id="OX3aU1RDGgWOiptvgO8HCc" Name="Normal" Kind="OutputPin" />
           </Patch>
-          <Link Id="ACMG1ZmbyHnOZH4YMJfJ2p" Ids="IXNuEPAHfYRMBuuNRgIC86,UBfnIrw7D1aPedbpvlmqe8" />
-          <Link Id="Ce6Emze3PsXPXQJxojTzSa" Ids="C9tH4LG4JeYLqPnd3u8H5G,CbcgHha8yVDOGLoA0tWIGp" />
+          <Link Id="J0of0MerqAaNRjoiDvcdt0" Ids="IXNuEPAHfYRMBuuNRgIC86,SseCyq9RCb0Oj6bmr7OvmK,NmyhnPeFZcJNrFCaoOs4KM" />
+          <Link Id="LdAjjMV4Gs5QB1LtWikHsf" Ids="LQL8GuSpuUlQbwBEJiMAps,CbcgHha8yVDOGLoA0tWIGp" />
         </Patch>
       </Node>
       <!--
@@ -2326,8 +2327,8 @@
     </Node>
   </Patch>
   <DocumentDependency Id="O6MZQJSZgpmPMPavsHVvNl" Location="./Fuse.Core.vl" IsFriend="true" />
-  <NugetDependency Id="CyWvFpGP3L9MOc9gCfyrxh" Location="VL.CoreLib" Version="2025.7.0-0170-gf0ee7a321e" />
-  <NugetDependency Id="CeClzLIoFlWLBKXvavB7at" Location="VL.Stride" Version="2025.7.0-0170-gf0ee7a321e" />
+  <NugetDependency Id="CyWvFpGP3L9MOc9gCfyrxh" Location="VL.CoreLib" Version="2025.7.0-0073-g6c68558bd9" />
+  <NugetDependency Id="CeClzLIoFlWLBKXvavB7at" Location="VL.Stride" Version="2025.7.0-0073-g6c68558bd9" />
   <DocumentDependency Id="Vvwrq7CzOo7MYp2HT4adLX" Location="./Fuse.Material.vl" />
   <DocumentDependency Id="GoQqDjju07UOMWQ3bIBtvH" Location="./Fuse.Transform.vl" />
   <DocumentDependency Id="C0dzvrj7fz7NuXWDUx3Cmn" Location="./Fuse.Calculus.vl" />

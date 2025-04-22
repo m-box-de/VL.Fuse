@@ -175,6 +175,7 @@
             <Pin Id="HUyLrtLCOHbPY8d3KoylPQ" Name="Color VS" Kind="InputPin" />
             <Pin Id="GcqxfKA1neNN077VZ7xq9G" Name="Enabled" Kind="InputPin" />
             <Pin Id="HdZZBceLYdcPHD52ukGds1" Name="SPH Dim" Kind="InputPin" />
+            <Pin Id="Hcj5BiZl7BxNC0fBChZ48i" Name="Renderer" Kind="OutputPin" />
           </Node>
           <Pad Id="R1Kwn7mXkfzQdde54sKADy" SlotId="C3JgFxZ0jr8NGcOXNatkbv" Bounds="1100,1935" />
           <Pad Id="JlQzZONvTGoPMeXbbUaSBl" Comment="Threshold" Bounds="1080,1905,35,15" ShowValueBox="true" isIOBox="true" Value="3.99">
