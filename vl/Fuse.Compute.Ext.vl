@@ -20,7 +20,7 @@
         </p:Interfaces>
         <Patch Id="MGKIKVT8Vb1NskvGc6ncm0">
           <Canvas Id="KCiooKfxEIeQLQRKlw4A5h" CanvasType="Group">
-            <Node Bounds="295,220,125,19" Id="A89NTY2pcGLQdizUOCSI2L">
+            <Node Bounds="295,220,370,19" Id="A89NTY2pcGLQdizUOCSI2L">
               <p:NodeReference LastCategoryFullName="Fuse.Compute" LastDependency="Fuse.Core.vl" OverloadStrategy="AllPinsThatAreNotCommon">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <Choice Kind="ProcessAppFlag" Name="AppendBuffer" />
@@ -44,7 +44,7 @@
               <Pin Id="ICXeEEgisAoMCEvi1p0MVQ" Name="InitialValues" Kind="InputPin" />
               <Pin Id="TEbYHpZQidIPVY3DjO5Czh" Name="Initialize" Kind="InputPin" />
             </Node>
-            <Pad Id="TxnziXhVeJeO27eDVQrSlH" SlotId="CDgeLUxO7SlOlmsFTOFS5o" Bounds="327,159" />
+            <Pad Id="TxnziXhVeJeO27eDVQrSlH" SlotId="CDgeLUxO7SlOlmsFTOFS5o" Bounds="388,200" />
             <ControlPoint Id="TiLPcWIYxAAP5dlKXScxag" Bounds="211,320" />
             <Node Bounds="145,349,206,279" Id="L39YrMo4QlQN9GHdFXGhbZ">
               <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
@@ -124,8 +124,8 @@
                 </Node>
               </Patch>
             </Node>
-            <ControlPoint Id="S3GQsPujYlKPaN6GNwT453" Bounds="393,280" />
-            <ControlPoint Id="RQs9oSbyET2Lzq6HIpCxWg" Bounds="369,310" />
+            <ControlPoint Id="S3GQsPujYlKPaN6GNwT453" Bounds="589,271" />
+            <ControlPoint Id="RQs9oSbyET2Lzq6HIpCxWg" Bounds="516,291" />
             <Pad Id="LbGKkTkULsuPx6YqioVfFh" SlotId="TVwoBrc1bcWMYunG3zph5A" Bounds="136,880" Value="0, 0, 0" />
             <Pad Id="UX2GVI0kPfpOjNRZKZZSQX" SlotId="TVwoBrc1bcWMYunG3zph5A" Bounds="613,104" Value="0, 0, 0" />
             <Pad Id="M4R9QewMluzQKJRahDhMAy" Comment=" " Bounds="613,56,119,15" ShowValueBox="true" isIOBox="true" Value="1000000">
@@ -188,7 +188,7 @@
                 <Link Id="QY6oZBI7JJ1OnQ5IHx6kHs" Ids="K4Bgm49PjL6MvSOXyQKtvH,JYqGlfWnlh1NL1T0Ida2LS" />
               </Patch>
             </Node>
-            <Pad Id="JQpfGBTzJ4dLnjdMySpA3l" Comment="CopyCount" Bounds="357,159,35,35" ShowValueBox="true" isIOBox="true" Value="True">
+            <Pad Id="JQpfGBTzJ4dLnjdMySpA3l" Comment="CopyCount" Bounds="479,200,35,15" ShowValueBox="true" isIOBox="true" Value="True">
               <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
                 <Choice Kind="ImmutableTypeFlag" Name="Boolean" />
               </p:TypeAnnotation>
@@ -196,7 +196,7 @@
                 <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Toggle</p:buttonmode>
               </p:ValueBoxSettings>
             </Pad>
-            <Node Bounds="385,109,25,19" Id="H6vIqDfz8YJP49snnNt74K">
+            <Node Bounds="569,140,25,19" Id="H6vIqDfz8YJP49snnNt74K">
               <p:NodeReference LastCategoryFullName="Collections.Spread" LastDependency="VL.CoreLib.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <Choice Kind="ProcessAppFlag" Name="I" />
@@ -206,7 +206,7 @@
               <Pin Id="DF8vsuNXH3BQFr2Ll4U1vn" Name="Count" Kind="InputPin" />
               <Pin Id="BpvFhU2jtxxLCfcbE6ZMgg" Name="Output" Kind="OutputPin" />
             </Node>
-            <Node Bounds="415,169,57,19" Id="H5HFLcbewtiLcQJWfPOWzX">
+            <Node Bounds="660,180,57,19" Id="H5HFLcbewtiLcQJWfPOWzX">
               <p:NodeReference LastCategoryFullName="Control" LastDependency="VL.CoreLib.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <Choice Kind="ProcessAppFlag" Name="Changed" />
@@ -217,15 +217,8 @@
               <Pin Id="AMI4rokzzAQMBWryb7SKSI" Name="Result" Kind="OutputPin" />
               <Pin Id="RVTh4YguzSJQRAbgC38Kdm" Name="Unchanged" Kind="OutputPin" />
             </Node>
+            <ControlPoint Id="FBylLKrffhcQcJ5B7uqi8X" Bounds="382,291" />
           </Canvas>
-          <ProcessDefinition Id="FwxyWGr4gEYO1J3mcnm0Cw" HasStateOut="true">
-            <Fragment Id="HsYt5CLFQEFQTUI5tnYfb6" Patch="UUAUxptes8RNKyHsL1HWHO" Enabled="true" />
-            <Fragment Id="JZGMkzthXGSMCRBuVX6yoM" Patch="Ogujwqw2vQVL14XavJNoqT" />
-            <Fragment Id="A50SfFHoQ8qMPPj1zRvHGe" Patch="VlEOTotJnzPQR14Fo2WM6W" Enabled="true" />
-            <Fragment Id="HdV6xza6rtLMNrbCHsI6dc" Patch="SZs6Z5DgIgYMc5J3uMqSjf" Enabled="true" />
-            <Fragment Id="M05gK8wUjFgPumLqgG33T1" Patch="QVOYAZltmMCLlv0AkBnsYD" />
-            <Fragment Id="RcRDQbROJ3TNAdDykHAHuT" Patch="SZcSF2cYtMlM52ULlwxR74" Enabled="true" />
-          </ProcessDefinition>
           <Slot Id="CDgeLUxO7SlOlmsFTOFS5o" Name="Type">
             <p:TypeAnnotation p:Type="TypeReference">
               <Choice Kind="TypeFlag" Name="Integer32" />
@@ -274,11 +267,11 @@
             </Pin>
             <Pin Id="BTwtkzwemSoL1EusjVu11K" Name="Enabled" Kind="InputPin" />
           </Patch>
-          <Patch Id="VlEOTotJnzPQR14Fo2WM6W" Name="GetNumberOfAvailableElements">
-            <Pin Id="IlyrTAdt84jPadLnK3Wsfz" Name="Number Of Available Elements" Kind="OutputPin" />
+          <Patch Id="VlEOTotJnzPQR14Fo2WM6W" Name="GetNumberOfAvaiableElements">
+            <Pin Id="IlyrTAdt84jPadLnK3Wsfz" Name="Number Of Avaiable Elements" Kind="OutputPin" />
           </Patch>
-          <Patch Id="SZs6Z5DgIgYMc5J3uMqSjf" Name="GetNumberOfEvailableElementsGPU">
-            <Pin Id="HKNQlw3EGbTLOOgwf2zfEh" Name="Number Of Available Elements GPU" Kind="OutputPin" />
+          <Patch Id="SZs6Z5DgIgYMc5J3uMqSjf" Name="GetNumberOfAvaiableElementsGPU">
+            <Pin Id="HKNQlw3EGbTLOOgwf2zfEh" Name="Number Of Avaiable Elements GPU" Kind="OutputPin" />
           </Patch>
           <Patch Id="QVOYAZltmMCLlv0AkBnsYD" Name="GetComputeStage">
             <Pin Id="LFHZ07NGklBPY0KNHuu5uM" Name="Output" Kind="OutputPin" />
@@ -294,6 +287,20 @@
           <Link Id="AxsWPQ5yKq2P52kKlvC70i" Ids="BpvFhU2jtxxLCfcbE6ZMgg,TT0y6rDQqwyLr6Tzv4dXjY" />
           <Link Id="KefKev3dintPuEC52hf4oc" Ids="AMI4rokzzAQMBWryb7SKSI,TEbYHpZQidIPVY3DjO5Czh" />
           <Link Id="JVToUCRsKn3NWt2ntgqFaP" Ids="BpvFhU2jtxxLCfcbE6ZMgg,ICXeEEgisAoMCEvi1p0MVQ" />
+          <Link Id="VcfaEN3ARmAOB4gswd3RxY" Ids="J5lYlNf7QaDNBvPjh06jPO,FBylLKrffhcQcJ5B7uqi8X" />
+          <Link Id="TaaKZscWr0zMssReMl5u59" Ids="FBylLKrffhcQcJ5B7uqi8X,T1R04XMKPB3MVEdU5Pg5ZO" IsHidden="true" />
+          <Patch Id="LB31ZpwElyTO1OLZ0Yg48q" Name="GetAvaiableBuffer">
+            <Pin Id="T1R04XMKPB3MVEdU5Pg5ZO" Name="AvaiableBuffer" Kind="OutputPin" />
+          </Patch>
+          <ProcessDefinition Id="FwxyWGr4gEYO1J3mcnm0Cw" HasStateOut="true">
+            <Fragment Id="HsYt5CLFQEFQTUI5tnYfb6" Patch="UUAUxptes8RNKyHsL1HWHO" Enabled="true" />
+            <Fragment Id="JZGMkzthXGSMCRBuVX6yoM" Patch="Ogujwqw2vQVL14XavJNoqT" />
+            <Fragment Id="A50SfFHoQ8qMPPj1zRvHGe" Patch="VlEOTotJnzPQR14Fo2WM6W" Enabled="true" />
+            <Fragment Id="HdV6xza6rtLMNrbCHsI6dc" Patch="SZs6Z5DgIgYMc5J3uMqSjf" Enabled="true" />
+            <Fragment Id="CJdn3UH8qR3OZomzKCaILq" Patch="LB31ZpwElyTO1OLZ0Yg48q" Enabled="true" />
+            <Fragment Id="M05gK8wUjFgPumLqgG33T1" Patch="QVOYAZltmMCLlv0AkBnsYD" />
+            <Fragment Id="RcRDQbROJ3TNAdDykHAHuT" Patch="SZcSF2cYtMlM52ULlwxR74" Enabled="true" />
+          </ProcessDefinition>
         </Patch>
       </Node>
       <!--
@@ -2075,8 +2082,8 @@
         </p:NodeReference>
         <Patch Id="V1Omilwi2PAOXQmceZiVj6">
           <Canvas Id="OC544lTfwMDN3xTEVxmNmc" CanvasType="Group">
-            <ControlPoint Id="J6U9OqlWzZIQHI9dHh2s58" Bounds="587,1060" />
-            <ControlPoint Id="Kq9YRU6VehaP7Li18a9nw7" Bounds="647,1030" />
+            <ControlPoint Id="J6U9OqlWzZIQHI9dHh2s58" Bounds="567,1060" />
+            <ControlPoint Id="Kq9YRU6VehaP7Li18a9nw7" Bounds="607,1030" />
             <ControlPoint Id="EA0Xi78KRH6MpROXGhLQXV" Bounds="527,900" />
             <Node Bounds="525,982,125,19" Id="IcoCV6o9RalNnMvG9jwknq">
               <p:NodeReference LastCategoryFullName="Fuse.Compute.Util" LastDependency="Fuse.Compute.vl">
@@ -2088,18 +2095,31 @@
               <Pin Id="BQyIpz0qLJfPpJj4RVLB44" Name="Emitters" Kind="InputPin" />
               <Pin Id="OOX44qFd5h3LwlOdvH1v3y" Name="Enabled" Kind="InputPin" />
               <Pin Id="InYzd7uI2J9PqurFkOiJ4j" Name="Output" Kind="StateOutputPin" />
-              <Pin Id="EoHq3MSWzgGPeHn5cCgx5z" Name="Number Of Available Elements" Kind="OutputPin" />
-              <Pin Id="LvYeqCBKor2NtviM5ei7hS" Name="Number Of Available Elements GPU" Kind="OutputPin" />
+              <Pin Id="EoHq3MSWzgGPeHn5cCgx5z" Name="Number Of Avaiable Elements" Kind="OutputPin" />
+              <Pin Id="LvYeqCBKor2NtviM5ei7hS" Name="Number Of Avaiable Elements GPU" Kind="OutputPin" />
+              <Pin Id="SMn5DazTQBzO2MuHwRFVJo" Name="AvaiableBuffer" Kind="OutputPin" />
             </Node>
-            <ControlPoint Id="DTEaACEKbuILBMtMIfmruV" Bounds="527,1101" />
+            <ControlPoint Id="DTEaACEKbuILBMtMIfmruV" Bounds="527,1130" />
             <ControlPoint Id="HWLBOGQZ55dO8GIHNTubGz" Bounds="587,930" />
             <ControlPoint Id="Kite3tjUhxuOWiXibrnQ39" Bounds="647,931" />
+            <Node Bounds="645,1080,145,19" Id="Ea9Er6O7NfMNUeILC7Rxad">
+              <p:NodeReference LastCategoryFullName="FuseParticles" LastDependency="Simulation_Test_03.vl">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <Choice Kind="ProcessAppFlag" Name="ReadBackIndices (AppendedBuffer)" />
+              </p:NodeReference>
+              <Pin Id="S2Ji9EfjkErPYnZEWKG9c2" Name="Node Context" Kind="InputPin" IsHidden="true" />
+              <Pin Id="SLIHDXsliPnPAQgNJfk6m3" Name="Buffer" Kind="InputPin" />
+              <Pin Id="HlJ2kcF5nGyOG7eVMkWYwh" Name="Output" Kind="OutputPin" />
+              <Pin Id="GFlUV36yhmgM51XNGHRX9x" Name="Frame Delay" Kind="InputPin" />
+            </Node>
+            <ControlPoint Id="PhAIE7x3gLrLlkLIhszJon" Bounds="647,1130" />
           </Canvas>
           <ProcessDefinition Id="DYVmVa534S1PjTeLbdNPCj">
             <Fragment Id="DDEFCQxAUUSNVCIwOIk2Vd" Patch="VdD1SYf3grjNW035MNOwrK" Enabled="true" />
             <Fragment Id="Lz8xC0s3cuwLqneP2KUSlC" Patch="MzAkQcEnaBVMjFZPQUBbYh" Enabled="true" />
             <Fragment Id="Bi4595v95f9LTalZHsHT7G" Patch="BbAVMfhOveOLX9gr6sNrlF" Enabled="true" />
             <Fragment Id="AnmWPhBZgw6O2HQ2Gmv7MG" Patch="Ai21FY5zuouPcoOs5r0HuV" Enabled="true" />
+            <Fragment Id="V4rdHzJqhGpLQcXS7TGFpQ" Patch="O4XU59v06akMjINrtOWYRC" Enabled="true" />
           </ProcessDefinition>
           <Link Id="Uni9rMDQEX6N1C0P3xli2Y" Ids="J6U9OqlWzZIQHI9dHh2s58,Gz0HXGzjH4GNNah8kzaL5f" IsHidden="true" />
           <Link Id="EJGVMTF0cIRN0TT1Xl4P1a" Ids="Kq9YRU6VehaP7Li18a9nw7,QYOuaNbagxtLc1a5jqfUgR" IsHidden="true" />
@@ -2127,6 +2147,12 @@
           <Link Id="IEgwz45PcYtNSD5Uz6wl3I" Ids="HWLBOGQZ55dO8GIHNTubGz,BQyIpz0qLJfPpJj4RVLB44" />
           <Link Id="FKe0hP4EJWPLoTSTsg60kd" Ids="N44IQQyxcBIMj4kDdENZlZ,Kite3tjUhxuOWiXibrnQ39" IsHidden="true" />
           <Link Id="VKj5b8K6OOWOmV6GdKUdXl" Ids="Kite3tjUhxuOWiXibrnQ39,OOX44qFd5h3LwlOdvH1v3y" />
+          <Patch Id="O4XU59v06akMjINrtOWYRC" Name="Debug">
+            <Pin Id="E6m9rnpqcyYMiqb0kFxLXU" Name="Avaiable" Kind="OutputPin" />
+          </Patch>
+          <Link Id="Lhr09eT5ac2Nc5CJPV2qYI" Ids="HlJ2kcF5nGyOG7eVMkWYwh,PhAIE7x3gLrLlkLIhszJon" />
+          <Link Id="KXJMv41oUltQIq9jHHyVPe" Ids="PhAIE7x3gLrLlkLIhszJon,E6m9rnpqcyYMiqb0kFxLXU" IsHidden="true" />
+          <Link Id="JhxIWSs1g3gMxZ3KKEecGT" Ids="SMn5DazTQBzO2MuHwRFVJo,SLIHDXsliPnPAQgNJfk6m3" />
         </Patch>
       </Node>
       <!--
@@ -2154,6 +2180,7 @@
               <Pin Id="HzUfCKY6eeeO1kq3qo8XL4" Name="Number Of Evailable Elements" Kind="OutputPin" />
               <Pin Id="Hy5hQidgtziNkCZP8rsOE7" Name="Number Of Evailable Elements GPU" Kind="OutputPin" />
               <Pin Id="MnxzMEYlKLkLsvYnX803tn" Name="On Dead" Kind="InputPin" />
+              <Pin Id="M7ugI1XMjiILC5JvsLzaVc" Name="Avaiable" Kind="OutputPin" />
             </Node>
             <ControlPoint Id="SAOixhN2FUiO7XekS5RaAx" Bounds="307,361" />
             <ControlPoint Id="THSuBLr7adpNNSjjR0cj9j" Bounds="320,491" />
@@ -2231,4 +2258,5 @@
   <NugetDependency Id="DM3IKkz71t7N3BMAN4EA3O" Location="VL.Stride.Runtime" Version="2025.7.0-0318-gf09de4df1e" />
   <DocumentDependency Id="QMkCMwGUJabNLBUXKTvaIu" Location="./Fuse.Core.Ext.vl" IsFriend="true" />
   <PlatformDependency Id="QTH9Eg8CpKGLOPYQm0wGaY" Location="../lib/net8.0/Fuse.dll" />
+  <NugetDependency Id="NzTR80cBd2EQLIxtwWBEd2" Location="VL.Fuse.Extended" Version="0.0.0" />
 </Document>

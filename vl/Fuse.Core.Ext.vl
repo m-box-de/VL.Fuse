@@ -629,6 +629,56 @@
             <ControlPoint Id="LRNpHzNUVDxOkHNQMH3dcO" Bounds="1176,120" />
             <ControlPoint Id="C9IZptGCOCqNALbpHOTtaA" Bounds="806,396" />
             <ControlPoint Id="VY7Rqgtu4lRMPITRn0PumZ" Bounds="806,566" />
+            <!--
+
+    ************************ GetBuffer ************************
+
+-->
+            <Node Name="GetBuffer" Bounds="944,-260,250,108" Id="JdPRrvhh6D8LSzcGcAMoId">
+              <p:NodeReference>
+                <Choice Kind="OperationDefinition" />
+              </p:NodeReference>
+              <Patch Id="RRhA29LuJlTLjTOSD05GGo" IsGeneric="true" ExplicitTypeParameters="T">
+                <Pin Id="Kp0uIY3kwA2LHnRiRGiThk" Name="Input" Kind="InputPin">
+                  <p:TypeAnnotation LastCategoryFullName="Fuse.Compute" LastDependency="Fuse.Core.Ext.vl">
+                    <Choice Kind="TypeFlag" Name="AppendBuffer" />
+                    <p:TypeArguments>
+                      <TypeReference>
+                        <Choice Kind="TypeFlag" Name="T" />
+                      </TypeReference>
+                    </p:TypeArguments>
+                  </p:TypeAnnotation>
+                </Pin>
+                <ControlPoint Id="HjoEJXcMktVMq73JqaoyIi" Bounds="958,-242" />
+                <Link Id="DKOvIgHKfZZLWdkl8WklD1" Ids="Kp0uIY3kwA2LHnRiRGiThk,HjoEJXcMktVMq73JqaoyIi" IsHidden="true" />
+                <Node Bounds="956,-223,94,26" Id="DpwBJdLAJqvMR9f1hsEOQU">
+                  <p:NodeReference LastCategoryFullName="Fuse.Compute.AppendBuffer" LastDependency="VL.Fuse.vl">
+                    <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                    <CategoryReference Kind="ClassType" Name="AppendBuffer" />
+                    <Choice Kind="OperationCallFlag" Name="GetAppendBuffer" />
+                  </p:NodeReference>
+                  <Pin Id="KLukbCxlezHNCf68CLiemc" Name="Input" Kind="StateInputPin" />
+                  <Pin Id="GS1FufM7CViPQyXRa3JXYS" Name="Output" Kind="StateOutputPin" />
+                  <Pin Id="IZiDrTcYzXKLpQyZZMKJxC" Name="Append Buffer" Kind="OutputPin" />
+                </Node>
+                <Link Id="IjesI84e1ilNw1iPZXFZdm" Ids="HjoEJXcMktVMq73JqaoyIi,KLukbCxlezHNCf68CLiemc" />
+                <ControlPoint Id="SipERFNLHU5NSC74zdnekI" Bounds="1047,-169" />
+                <Link Id="ThzWViILuBpMXhYSoHE0hB" Ids="IZiDrTcYzXKLpQyZZMKJxC,SipERFNLHU5NSC74zdnekI" />
+                <Pin Id="JCcyIyqsh0tMVMZN9Tab6g" Name="Append Buffer" Kind="OutputPin">
+                  <p:TypeAnnotation LastCategoryFullName="Stride.Graphics" LastDependency="Stride.Graphics.dll">
+                    <Choice Kind="TypeFlag" Name="Buffer`1" />
+                    <p:TypeArguments>
+                      <TypeParameterReference Name="T" />
+                    </p:TypeArguments>
+                  </p:TypeAnnotation>
+                </Pin>
+                <Link Id="OsS9THDaddMMKWSjOSWhIV" Ids="SipERFNLHU5NSC74zdnekI,JCcyIyqsh0tMVMZN9Tab6g" IsHidden="true" />
+                <ControlPoint Id="TIhtEfkeOAhQUa8blrKAEH" Bounds="1139,-169" />
+                <Pin Id="C9GVtsZiWdwMCLjXYm5JiH" Name="Output" Kind="OutputPin" />
+                <Link Id="SXTRugHy535QCkKqZoewnc" Ids="TIhtEfkeOAhQUa8blrKAEH,C9GVtsZiWdwMCLjXYm5JiH" IsHidden="true" />
+                <Link Id="HUm2MAbVJMuNndtqF4y85q" Ids="GS1FufM7CViPQyXRa3JXYS,TIhtEfkeOAhQUa8blrKAEH" />
+              </Patch>
+            </Node>
           </Canvas>
           <Link Id="VXD24lC0tHCO1eVc2fCSx9" Ids="TBIVRWpOBElOKn8UyHaqrN,M5etG4qet5VLRFQZ7dP9ut" />
           <Slot Id="SO6NoToVeonPnHSpp6iuBw" Name="Number Of Elements">
@@ -661,6 +711,7 @@
             <Fragment Id="UTlcnnco3U7Oxsvy8Sq7mk" Patch="LNp2MR2v93yOhWT4xWBLlU" />
             <Fragment Id="BzJ22Mu0ermP0l7kkVYkpG" Patch="RVcBZjjuAAuPRrb7pv9b9K" />
             <Fragment Id="DMvAySI9UAZNSi1einYWdg" Patch="MwZqNmY7EtmNd4QBlTt1iV" />
+            <Fragment Id="VJPyMPA9YLALQ4uXwQfmtZ" Patch="JdPRrvhh6D8LSzcGcAMoId" />
           </ProcessDefinition>
           <Link Id="Jbf0js7fv8FPapHlp8De6a" Ids="DwJCW1vrgeLOSTY26FE29F,He11u2uUQnPPLlC0ITNn4y" />
           <Link Id="BT0SHCBfSegQPFmDaRb0eH" Ids="He11u2uUQnPPLlC0ITNn4y,CRzx4aaZdfzNY3m0svspFy" />
@@ -709,7 +760,7 @@
                 <Choice Kind="TypeFlag" Name="T" />
               </p:TypeAnnotation>
             </Pin>
-            <Pin Id="IlcD0ak6fZVPzJa7NcLMn6" Name="CopyCount" Kind="InputPin" DefaultValue="True" Visibility="Optional" />
+            <Pin Id="IlcD0ak6fZVPzJa7NcLMn6" Name="CopyCount" Kind="InputPin" DefaultValue="False" Visibility="Optional" />
             <Pin Id="VONKqYsbE09OAwBVNvPiwp" Name="InitialValues" Kind="InputPin" Visibility="Optional">
               <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
                 <Choice Kind="TypeFlag" Name="Optional" />
@@ -1678,4 +1729,5 @@
   <PlatformDependency Id="BNTslDkS2LyNUS92RGitxy" Location="C:/Users/Christian/AppData/Local/vvvv/_vvvv/vvvv_gamma_2022.5.0-0485-g8f46e4a34a/Stride.Graphics.dll" />
   <DocumentDependency Id="EeBgM0qweI9MwndcHnjhQs" Location="./Fuse.Core.vl" IsFriend="true" />
   <NugetDependency Id="OetZoSuUy1lNWUvCYLejrk" Location="VL.Fuse" Version="0.0.0" />
+  <NugetDependency Id="Uhwo9YLPUvjOtnzpo7Tz1g" Location="VL.Fuse.Extended" Version="0.0.0" />
 </Document>
